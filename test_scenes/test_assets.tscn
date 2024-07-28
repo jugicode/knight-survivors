@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://dutqp3p1yepho"]
+
+[ext_resource type="Texture2D" uid="uid://cf0pugbotmfe8" path="res://Addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_00oat"]
+[ext_resource type="Texture2D" uid="uid://6nphfxnp4rvb" path="res://Addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="2_yck61"]
+[ext_resource type="Texture2D" uid="uid://bvmfta4alba5e" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/G_Idle.png" id="3_5mv24"]
+[ext_resource type="Texture2D" uid="uid://djf67ijodf3mm" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/G_Spawn.png" id="4_nr4cq"]
+[ext_resource type="Texture2D" uid="uid://cdqeyx2vmg0gy" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/M_Idle.png" id="5_gvwms"]
+[ext_resource type="Texture2D" uid="uid://dew1fs067a36s" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="6_433hm"]
+[ext_resource type="Texture2D" uid="uid://b4xkktioxf0bw" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/W_Idle.png" id="7_sjlme"]
+[ext_resource type="Texture2D" uid="uid://ceyscl34y377v" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/W_Spawn.png" id="8_6r6aq"]
+[ext_resource type="PackedScene" uid="uid://b0emml0pfgmwh" path="res://Player/player.tscn" id="9_peg14"]
+[ext_resource type="PackedScene" uid="uid://21sdppsfi2yl" path="res://misc/meat.tscn" id="10_lilkx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(-785, 238)
+texture = ExtResource("1_00oat")
+
+[node name="PawnRed" type="Sprite2D" parent="."]
+position = Vector2(2520, 213)
+scale = Vector2(1.43723, 1.43723)
+texture = ExtResource("2_yck61")
+
+[node name="GIdle" type="Sprite2D" parent="."]
+position = Vector2(1059, 2158)
+texture = ExtResource("3_5mv24")
+
+[node name="GSpawn" type="Sprite2D" parent="."]
+position = Vector2(1076, 1826)
+texture = ExtResource("4_nr4cq")
+
+[node name="MIdle" type="Sprite2D" parent="."]
+position = Vector2(1246, 2158)
+texture = ExtResource("5_gvwms")
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(1072, 1725)
+texture = ExtResource("6_433hm")
+
+[node name="WIdle" type="Sprite2D" parent="."]
+position = Vector2(922, 2150)
+texture = ExtResource("7_sjlme")
+
+[node name="WSpawn" type="Sprite2D" parent="."]
+position = Vector2(1070, 1602)
+texture = ExtResource("8_6r6aq")
+
+[node name="Player" parent="." instance=ExtResource("9_peg14")]
+position = Vector2(298, 408)
+
+[node name="Meat" parent="." instance=ExtResource("10_lilkx")]
+position = Vector2(474, 416)

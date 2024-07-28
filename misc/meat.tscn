@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://21sdppsfi2yl"]
+
+[ext_resource type="Texture2D" uid="uid://dew1fs067a36s" path="res://Addons/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="1_uwkui"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_avo8q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjqls"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txwtn"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys2bs"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru2kh"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ivhq"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbcu3"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11u3e"]
+atlas = ExtResource("1_uwkui")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cwjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjqls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txwtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys2bs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru2kh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ivhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbcu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11u3e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3t1t"]
+radius = 38.0
+height = 100.0
+
+[node name="Meat" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1cwjn")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+offset = Vector2(0, -30)
+script = ExtResource("2_avo8q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -25)
+scale = Vector2(0.831152, 0.664136)
+shape = SubResource("CapsuleShape2D_u3t1t")

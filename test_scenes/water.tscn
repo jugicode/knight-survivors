@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://cq18p3gkst2n"]
+
+[ext_resource type="Texture2D" uid="uid://bjcifw2ja01fx" path="res://Addons/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="1_2vfal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj5vl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3qv2"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl66u"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mgqg"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1tnm"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_synvh"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2suej"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfnmj"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfgfk"]
+atlas = ExtResource("1_2vfal")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hnevb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3qv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl66u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mgqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1tnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_synvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2suej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfnmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfgfk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Water" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uj5vl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hnevb")
+frame_progress = 0.180269
